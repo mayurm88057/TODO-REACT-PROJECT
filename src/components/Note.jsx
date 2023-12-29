@@ -1,0 +1,22 @@
+import React from "react";
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
+
+
+
+function Note(props){
+
+  function handleClick(){
+    props.onDelete(props.id);
+ }
+
+ return(
+        <div ClassName="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}>
+      <DeleteSweepIcon/>
+      </button>
+       </div>
+    );
+}
+export default Note;
